@@ -1,4 +1,4 @@
-# bachelor_prototype
+# Automatic Music System for Retail (bachelor)
 Prototype for an automatic retail music system.
 Built in MAX 7.
 
