@@ -15,3 +15,6 @@ Implementation of API based on "Amazing Max Stuff" video on youtube (https://www
 
 - Customer counter:
 	Has to read from a file (bad way to implement customers)
+- Logging:
+	Does not work properly, sometimes won't make new file
+	Bugs out on filename.
