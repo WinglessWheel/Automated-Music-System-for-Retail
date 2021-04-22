@@ -1,0 +1,32 @@
+4 2021 13:41:41 SSD:/Users/torjemarkussen/Documents/max_prototyp_01_musicfolder_01/81_149/03 Home In My Heart.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:41:53 /music09 Guardian And Tramp.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:41:58 /music03 Home In My Heart.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:42:16 SSD:/Users/torjemarkussen/Documents/max_prototyp_01_musicfolder_01/<=150/04 Love_.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:42:23 /music07 Magnetic City.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:42:33 /music01 Me! Come! My Dazzled Face.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:42:39 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music/03 Larotta Dans.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:42:41 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music/03 Larotta Dans.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:44:55 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/01 Me! Come! My Dazzled Face.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:45:2 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_fast/02 Skeksis.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:51:47 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_fast/08 Two Weeks.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 13:55:18 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_fast/04 Love_.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 14:0:13 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_fast/03 Shitstorm.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 14:4:38 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_fast/10 Zen.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 14:9:43 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_fast/07 Possessions.m4a
+Weather: 9.52°c Light Cloud
+22 4 2021 14:13:59 SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/07 Magnetic City.m4a
+Weather: 9.52°c Light Cloud
