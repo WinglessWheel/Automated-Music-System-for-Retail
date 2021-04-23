@@ -1,8 +1,8 @@
-# Automated Music System for Retail (bachelors assignment)
+# Automated Music System for Retail (bachelors thesis)
 Prototype for an automatic retail music system.
 Built in MAX 7.0.0.
 
-Part of my bachelor assignment. 
+Part of my bachelor thesis. 
 Music Technology @ NTNU, spring 2021.
 
 API: https://www.metaweather.com/api/
@@ -11,7 +11,8 @@ Implementation of API based on "Amazing Max Stuff" video on youtube (https://www
 Disclaimer: The music provided is not relevant to any actual setting, and is solely for the purpose of testing. I do not own the licenses to use this music. Please use your own music for demonstration and testing purposes.
 
 ## How to use
-This system should automatically start playing music from an automatically chosen folder. If it doesn't check the folderpath for the music (in music player) and also check if the score evaluator gives any usable values. Lastly, check if the trigger object in the music player is active.
+Before you start, please add music to the folders marked "music_low, mid, high". The system should automatically start playing music when the patcher is opened, selected automatically from a folder based on the current score. 
+If it doesn't start playing: Check the folderpath for the music (in music player) and also check if the score evaluator gives any usable values. Lastly, check if the trigger object in the music player is active.
 In presentation mode the only thing that a person is able to change is by turning on the override and adjusting the volume. However, the volume should be calibrated upon installation and set as default in message box in output section. When the override is turned off the volume will automatically be set back to default value.
 
 ## Music player
