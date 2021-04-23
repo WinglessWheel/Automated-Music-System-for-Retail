@@ -21,21 +21,21 @@ The umenu gets a value that decides which file to play, this file gets chosen by
 - sfplay automatically bangs a message to urn when it is done playing so that it chooses a new number to be played.
 - same bang makes the sfplay play the next file.
 - bang also makes the score evaluator check if it should play files from different folder
-- The bang that bangs when done playing file also triggers 
 
 ## Bugs / issues
 - Music player:
-	Might repeat last played song when urn is cleared.
-	If you manually stop the playback with toggle it runs through all the files in umenu. This is because of the implementation of the randomizer, which reacts when you start and stop the playback. If you need to stop the music, use the pause button on the playbar object.
+	- Might repeat last played song when urn is cleared.
+	- If you manually stop the playback with toggle it runs through all the files in umenu. This is because of the implementation of the randomizer, which reacts when you start and stop the playback. If you need to stop the music, use the pause button on the playbar object.
 - Customer counter:
-	Has to read from a file (bad way to implement customers)
+	- Has to read from a file (bad way to implement customers)
 - Logging:
-	First file after opening outputs without date (day).
-	Deletes everything previous in logfile if program is reopened on same day.
+	- First file after opening outputs without date (day).
+	- Deletes everything previous in logfile if program is reopened on same day.
 - Auto gain:
-	Not connected. 
+	- Not connected. 
 - Weather report:
-	Unable to access files if not present in the project root.
+	- Unable to access image files if not present in the project root.
 
 ###### TO-DO
 - [ ] Auto gain: Needs to be connected with output section in a way that automatically adjusts the volume based on room ambience.
+- [ ] Readme: Expand for all different modules.
