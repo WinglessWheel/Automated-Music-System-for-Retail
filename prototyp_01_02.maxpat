@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 85.0, 79.0, 1360.0, 967.0 ],
+		"rect" : [ 85.0, 79.0, 1801.0, 967.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -854,7 +854,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2247.699951, 794.0, 73.0, 22.0 ],
 					"style" : "",
-					"text" : "7.61"
+					"text" : "7.575"
 				}
 
 			}
@@ -992,7 +992,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2247.699951, 675.0, 217.0, 35.0 ],
 					"style" : "",
-					"text" : "consolidated_weather[0]::the_temp 7.61"
+					"text" : "consolidated_weather[0]::the_temp 7.575"
 				}
 
 			}
@@ -1851,7 +1851,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1599.416626, 1042.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "set 18"
+					"text" : "set 21"
 				}
 
 			}
@@ -4327,7 +4327,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 280.0, 144.0, 355.0, 29.0 ],
 					"style" : "",
-					"text" : "Date and time and weekday calculator"
+					"text" : "Date and time || Weekday calculator"
 				}
 
 			}
