@@ -38,12 +38,50 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-148",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1886.0, 1286.0, 744.0, 22.0 ],
+					"style" : "",
+					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/customers/weekday_high_00.txt\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-81",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1448.583374, 1035.5, 56.0, 22.0 ],
+					"style" : "",
+					"text" : "delay 10"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-123",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1641.333374, 1345.5, 73.0, 20.0 ],
+					"style" : "",
+					"text" : "^ HOURS ^ "
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-304",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1448.583374, 1178.25, 96.0, 22.0 ],
+					"patching_rect" : [ 1448.583374, 1193.25, 96.0, 22.0 ],
 					"style" : "",
 					"text" : "combine $1 / $3"
 				}
@@ -56,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1729.0, 1003.0, 37.0, 22.0 ],
+					"patching_rect" : [ 1719.166626, 1022.25, 37.0, 22.0 ],
 					"style" : "",
 					"text" : "clear"
 				}
@@ -81,9 +119,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1641.333374, 1091.5, 56.0, 22.0 ],
+					"patching_rect" : [ 1641.333374, 1091.5, 49.0, 22.0 ],
 					"style" : "",
-					"text" : "delay 10"
+					"text" : "delay 1"
 				}
 
 			}
@@ -119,7 +157,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-333",
-					"items" : [ "weekday_high_00.txt", ",", "weekday_low_00.txt", ",", "weekday_med_00.txt", ",", "weekend_low_00.txt", ",", "weekend_med_00.txt", ",", "weekend_high_00.txt", ",", "weekday_high_00.txt", ",", "weekday_low_00.txt", ",", "weekday_med_00.txt", ",", "weekend_low_00.txt", ",", "weekend_med_00.txt", ",", "weekend_high_00.txt" ],
+					"items" : [ "weekday_high_00.txt", ",", "weekday_low_00.txt", ",", "weekday_med_00.txt", ",", "weekend_low_00.txt", ",", "weekend_med_00.txt", ",", "weekend_high_00.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -137,7 +175,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1448.583374, 1151.25, 141.0, 22.0 ],
+					"patching_rect" : [ 1448.583374, 1161.25, 141.0, 22.0 ],
 					"style" : "",
 					"text" : "combine path customers"
 				}
@@ -193,7 +231,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 919.499939, 1135.900024, 137.0, 89.0 ],
 					"style" : "",
-					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med\""
+					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow\""
 				}
 
 			}
@@ -385,13 +423,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-118",
-					"linecount" : 7,
+					"linecount" : 8,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1373.166626, 1566.75, 458.400024, 100.0 ],
+					"patching_rect" : [ 1373.166626, 1566.75, 458.400024, 114.0 ],
 					"style" : "",
-					"text" : "This customer counter is reading a document with twelve lines. Each line represents one hour of the opening hours. A real life situation would require an external input fed into the patch which directly changes the current customer number. Since this is to examplify implementation use it as an illustration rather than an actual module.\n\nIf you would like to test out different scenarios, please use the umenu labelled \"scenario\" to change the customer file."
+					"text" : "==----- Customer counter -----==\nThe customer counter is reading a document with twelve lines. Each line represents one hour of the opening hours. A real life situation would require an external input fed into the patch which directly changes the current customer number. Since this is to examplify implementation use it as an illustration rather than an actual module.\n\nIf you would like to test out different scenarios, please use the umenu labelled \"scenario\" to change the customer file."
 				}
 
 			}
@@ -600,17 +638,17 @@
 					"fontname" : "Helvetica",
 					"fontsize" : 15.0,
 					"id" : "obj-208",
-					"linecount" : 5,
+					"linecount" : 6,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2060.166748, 1404.0, 252.0, 83.0 ],
+					"patching_rect" : [ 2060.166748, 1404.0, 214.0, 98.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 3,
-					"presentation_rect" : [ 815.783325, 403.0, 412.0, 53.0 ],
+					"presentation_linecount" : 4,
+					"presentation_rect" : [ 815.783325, 403.0, 406.0, 68.0 ],
 					"style" : "",
-					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/05 Closer.m4a\"",
+					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/10 Haydn_ Symf. Nr. 94, Fra 2. Sats.m4a\"",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -1082,7 +1120,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1666.0, 272.0, 520.0, 49.0 ],
 					"style" : "",
-					"text" : "7, 5, 2021, 15:48:37, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/05 Closer.m4a cr Weather: 9.52°c, Heavy Cloud cr"
+					"text" : "7, 5, 2021, 17:46:56, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/10 Haydn_ Symf. Nr. 94, Fra 2. Sats.m4a cr Weather: 9.68°c, Heavy Cloud cr"
 				}
 
 			}
@@ -1562,7 +1600,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1603.666626, 1286.0, 71.0, 22.0 ],
+					"patching_rect" : [ 1603.666626, 1286.150024, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "expr $i1 - 9"
 				}
@@ -1627,7 +1665,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1603.666626, 1224.25, 34.0, 22.0 ],
+					"patching_rect" : [ 1603.166626, 1224.25, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "gate"
 				}
@@ -1709,7 +1747,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1603.666626, 1345.5, 46.0, 22.0 ],
+					"patching_rect" : [ 1591.666626, 1345.5, 46.0, 22.0 ],
 					"style" : "",
 					"text" : "line $1"
 				}
@@ -1913,25 +1951,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-230",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 714.5, 1436.5, 56.0, 22.0 ],
-					"style" : "",
-					"text" : "delay 10"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-234",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 714.5, 1410.0, 60.0, 22.0 ],
+					"patching_rect" : [ 714.5, 1421.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -2099,7 +2124,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1441.416626, 1256.25, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "set 36"
+					"text" : "set 27"
 				}
 
 			}
@@ -2626,9 +2651,22 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 714.5, 1474.0, 24.0, 24.0 ],
-					"style" : ""
+					"parameter_enable" : 1,
+					"patching_rect" : [ 714.5, 1477.75, 24.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "toggle[3]",
+							"parameter_shortname" : "toggle[3]",
+							"parameter_type" : 1,
+							"parameter_initial_enable" : 1,
+							"parameter_initial" : [ 0 ],
+							"parameter_invisible" : 1
+						}
+
+					}
+,
+					"style" : "",
+					"varname" : "toggle[3]"
 				}
 
 			}
@@ -2797,14 +2835,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-145",
-					"items" : [ "04 Song Of Gold.m4a", ",", "07 Magnetic City.m4a", ",", "05 Closer.m4a", ",", "01 Me! Come! My Dazzled Face.m4a", ",", "03 Home In My Heart.m4a", ",", "02 Boarders Of Canada.m4a", ",", "09 Guardian And Tramp.m4a", ",", "06 Poor Tom.m4a", ",", "08 I Believe.m4a" ],
+					"items" : [ "31 Midtøsten_ Fra Iran_ Sang Og Fløyte.m4a", ",", "04 Palestrina_ Kyrie Eleison Fra Missa Brevis.m4a", ",", "35 Kina_ Erhu Og Yang Chin.m4a", ",", "15 Grieg_ Morgenstemn. Fra Peer Gynt.m4a", ",", "18 Valen_ Fra Fugen Fra Preludium Og Fuge.m4a", ",", "21 Louis Armstrong_ Mack The Knife (Weill).m4a", ",", "23 Bill Haley_ Rock Around The Clock.m4a", ",", "02 Magnushymnen.m4a", ",", "34 Indonesia_ Gamelanmusikk.m4a", ",", "27 Musikk På Kantele.m4a", ",", "14 Grieg_ Trolltog Fra Lyr. Stk. Op. 54.m4a", ",", "36 Japan_ Shakuhachi.m4a", ",", "12 Beethoven_ Symf. Nr. 5, Fra 1. Sats.m4a", ",", "25 Kirsten Bråten Berg_ Bånsull.m4a", ",", "37 Australia_ DiDJeridu.m4a", ",", "30 Fra Afrika Sør For Sahara_ Zithembosi Zenkosi (Flerst. Sang).m4a", ",", "17 Debussy_ Piken Med Linhåret Fra Prelud. Bok 1.m4a", ",", "26 Knut Buen_ Haugelåt.m4a", ",", "22 Dave Brubeck Quartet_ Unsquare Dance.m4a", ",", "06 Dans For Lutt.m4a", ",", "05 Morley_ Now Is The Month Of Maying.m4a", ",", "16 Wagner_ Fra Isoldes Liebestod (Tristan).m4a", ",", "19 Bartok_ Fra Parenes Lek (Kons. For Orkester).m4a", ",", "33 India_ Raga.m4a", ",", "11 Mozart_ Eine Kleine Nachtmusik, 3. Sats.m4a", ",", "03 Larotta, Dans.m4a", ",", "07 Bach_ Badinerie, Suite Nr. 2 H-Moll.m4a", ",", "29 Fra Afrika Sør For Sahara_ Mbira Og Hosho.m4a", ",", "28 Flerstemt Sang Fra Sardinia.m4a", ",", "20 Nordheim_ Fra Epitaffio.m4a", ",", "01 Gregoriansk Sang_ Kyrie Eleison.m4a", ",", "10 Haydn_ Symf. Nr. 94, Fra 2. Sats.m4a", ",", "38 Sør- Og Mellom-Amerika_ Slipp Mine Fløyter Fri (Skruk).m4a", ",", "09 Händel_ For Unto Us.. Fra Messias.m4a", ",", "08 Vivaldi_ Våren, 1. Sats Fra Årstidene.m4a", ",", "32 Midtøsten_ Santur.m4a", ",", "13 Schubert_ Gute Nacht Fra Winterreise.m4a", ",", "24 Beatles_ She Loves You.m4a" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 714.5, 1379.0, 182.0, 22.0 ],
-					"prefix" : "SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/",
+					"prefix" : "SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/",
 					"style" : ""
 				}
 
@@ -2892,13 +2930,13 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "bang" ],
-					"patching_rect" : [ 747.499878, 1478.75, 59.0, 22.0 ],
+					"patching_rect" : [ 748.499878, 1477.75, 59.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"basictuning" : 440,
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 290496.0, "ticks" ],
+						"originallength" : [ 181235.2, "ticks" ],
 						"originaltempo" : 120.0,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
@@ -5240,7 +5278,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 807.916626, 1464.0, 756.999878, 1464.0 ],
+					"midpoints" : [ 807.916626, 1464.0, 757.999878, 1464.0 ],
 					"source" : [ "obj-104", 0 ]
 				}
 
@@ -5596,7 +5634,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 865.499939, 1512.0, 744.0, 1512.0, 744.0, 1473.0, 756.999878, 1473.0 ],
+					"midpoints" : [ 865.499939, 1512.0, 744.0, 1512.0, 744.0, 1473.0, 757.999878, 1473.0 ],
 					"source" : [ "obj-144", 0 ]
 				}
 
@@ -5626,7 +5664,7 @@
 					"destination" : [ "obj-208", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 805.5, 1404.0, 795.0, 1404.0, 795.0, 1464.0, 1359.0, 1464.0, 1359.0, 1677.0, 2046.0, 1677.0, 2046.0, 1389.0, 2302.666748, 1389.0 ],
+					"midpoints" : [ 805.5, 1404.0, 795.0, 1404.0, 795.0, 1464.0, 1359.0, 1464.0, 1359.0, 1677.0, 2046.0, 1677.0, 2046.0, 1389.0, 2264.666748, 1389.0 ],
 					"source" : [ "obj-145", 1 ]
 				}
 
@@ -6263,7 +6301,7 @@
 					"destination" : [ "obj-362", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 308.5, 796.375, 1628.166626, 796.375 ],
+					"midpoints" : [ 308.5, 796.375, 1627.666626, 796.375 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -6530,16 +6568,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-278", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 724.0, 1461.0, 724.0, 1461.0 ],
-					"source" : [ "obj-230", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-242", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -6569,10 +6597,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-230", 0 ],
+					"destination" : [ "obj-278", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 724.0, 1434.0, 724.0, 1434.0 ],
 					"source" : [ "obj-234", 0 ]
 				}
 
@@ -6769,10 +6796,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-331", 0 ],
+					"destination" : [ "obj-333", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1400.666626, 1059.0, 1458.083374, 1059.0 ],
 					"source" : [ "obj-257", 0 ]
 				}
 
@@ -6783,6 +6809,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 1400.666626, 1209.0, 1377.0, 1209.0, 1377.0, 1473.0, 1400.666626, 1473.0 ],
+					"source" : [ "obj-257", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-81", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"source" : [ "obj-257", 0 ]
 				}
 
@@ -7002,7 +7037,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 724.0, 1500.0, 744.0, 1500.0, 744.0, 1473.0, 756.999878, 1473.0 ],
+					"midpoints" : [ 724.0, 1500.0, 744.0, 1500.0, 744.0, 1473.0, 757.999878, 1473.0 ],
 					"source" : [ "obj-278", 0 ]
 				}
 
@@ -7223,6 +7258,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 1094.5, 540.0, 1094.5, 540.0 ],
 					"source" : [ "obj-302", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-148", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-304", 0 ]
 				}
 
 			}
@@ -7460,7 +7504,7 @@
 					"destination" : [ "obj-102", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1613.166626, 1368.0, 1554.0, 1368.0, 1554.0, 1344.0, 1377.0, 1344.0, 1377.0, 1251.0, 1400.666626, 1251.0 ],
+					"midpoints" : [ 1601.166626, 1368.0, 1554.0, 1368.0, 1554.0, 1344.0, 1377.0, 1344.0, 1377.0, 1251.0, 1400.666626, 1251.0 ],
 					"source" : [ "obj-328", 0 ]
 				}
 
@@ -7619,7 +7663,7 @@
 					"destination" : [ "obj-328", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1613.166626, 1335.0, 1613.166626, 1335.0 ],
+					"midpoints" : [ 1613.166626, 1335.0, 1601.166626, 1335.0 ],
 					"source" : [ "obj-345", 0 ]
 				}
 
@@ -7749,7 +7793,7 @@
 					"destination" : [ "obj-349", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1613.166626, 1248.0, 1613.166626, 1248.0 ],
+					"midpoints" : [ 1612.666626, 1248.0, 1613.166626, 1248.0 ],
 					"source" : [ "obj-362", 0 ]
 				}
 
@@ -7858,7 +7902,7 @@
 					"destination" : [ "obj-362", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1689.166626, 1281.0, 1665.0, 1281.0, 1665.0, 1242.0, 1647.0, 1242.0, 1647.0, 1221.0, 1613.166626, 1221.0 ],
+					"midpoints" : [ 1689.166626, 1281.0, 1665.0, 1281.0, 1665.0, 1242.0, 1647.0, 1242.0, 1647.0, 1221.0, 1612.666626, 1221.0 ],
 					"source" : [ "obj-374", 0 ]
 				}
 
@@ -8472,7 +8516,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 776.999878, 1512.0, 660.0, 1512.0, 660.0, 1344.0, 438.0, 1344.0, 438.0, 1302.0, 451.216736, 1302.0 ],
+					"midpoints" : [ 777.999878, 1512.0, 660.0, 1512.0, 660.0, 1344.0, 438.0, 1344.0, 438.0, 1302.0, 451.216736, 1302.0 ],
 					"source" : [ "obj-6", 1 ]
 				}
 
@@ -8482,7 +8526,7 @@
 					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 756.999878, 1512.0, 660.0, 1512.0, 660.0, 1344.0, 438.0, 1344.0, 438.0, 1263.0, 451.216736, 1263.0 ],
+					"midpoints" : [ 757.999878, 1512.0, 660.0, 1512.0, 660.0, 1344.0, 438.0, 1344.0, 438.0, 1263.0, 451.216736, 1263.0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -8492,7 +8536,7 @@
 					"destination" : [ "obj-58", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 796.999878, 1503.0, 816.0, 1503.0, 816.0, 1473.0, 830.499939, 1473.0 ],
+					"midpoints" : [ 797.999878, 1503.0, 816.0, 1503.0, 816.0, 1473.0, 830.499939, 1473.0 ],
 					"source" : [ "obj-6", 2 ]
 				}
 
@@ -8668,6 +8712,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-331", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-81", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-75", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -8792,10 +8845,11 @@
  ],
 		"parameters" : 		{
 			"obj-233" : [ "toggle[2]", "toggle[2]", 0 ],
-			"obj-56" : [ "gain~", "gain~", 0 ],
-			"obj-321" : [ "toggle[1]", "toggle[1]", 0 ],
 			"obj-14" : [ "toggle", "toggle", 0 ],
-			"obj-347" : [ "number", "number", 0 ]
+			"obj-347" : [ "number", "number", 0 ],
+			"obj-321" : [ "toggle[1]", "toggle[1]", 0 ],
+			"obj-56" : [ "gain~", "gain~", 0 ],
+			"obj-278" : [ "toggle[3]", "toggle[3]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -8899,8 +8953,8 @@
 , 			{
 				"name" : "rsliderGold",
 				"default" : 				{
-					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ],
-					"color" : [ 0.646639, 0.821777, 0.854593, 1.0 ]
+					"color" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
+					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
