@@ -38,6 +38,32 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-304",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1448.583374, 1178.25, 96.0, 22.0 ],
+					"style" : "",
+					"text" : "combine $1 / $3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-297",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1729.0, 1003.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-387",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -83,7 +109,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1532.166626, 955.25, 177.0, 89.0 ],
 					"style" : "",
-					"text" : "append weekday_high_00.txt, append weekday_low_ 00.txt, append weekday_med_00.txt, append weekend_low_00.txt, append weekend_med_00.txt, append weekend_high_00.txt"
+					"text" : "append weekday_high_00.txt, append weekday_low_00.txt, append weekday_med_00.txt, append weekend_low_00.txt, append weekend_med_00.txt, append weekend_high_00.txt"
 				}
 
 			}
@@ -93,7 +119,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-333",
-					"items" : [ "weekday_high_00.txt", ",", "weekday_low_", "00.txt", ",", "weekday_med_00.txt", ",", "weekend_low_00.txt", ",", "weekend_med_00.txt", ",", "weekend_high_00.txt", ",", "weekday_high_00.txt", ",", "weekday_low_", "00.txt", ",", "weekday_med_00.txt", ",", "weekend_low_00.txt", ",", "weekend_med_00.txt", ",", "weekend_high_00.txt" ],
+					"items" : [ "weekday_high_00.txt", ",", "weekday_low_00.txt", ",", "weekday_med_00.txt", ",", "weekend_low_00.txt", ",", "weekend_med_00.txt", ",", "weekend_high_00.txt", ",", "weekday_high_00.txt", ",", "weekday_low_00.txt", ",", "weekday_med_00.txt", ",", "weekend_low_00.txt", ",", "weekend_med_00.txt", ",", "weekend_high_00.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -111,9 +137,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1448.583374, 1130.5, 260.583252, 22.0 ],
+					"patching_rect" : [ 1448.583374, 1151.25, 141.0, 22.0 ],
 					"style" : "",
-					"text" : "combine path customers/$2"
+					"text" : "combine path customers"
 				}
 
 			}
@@ -579,12 +605,12 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2060.166748, 1404.0, 298.0, 83.0 ],
+					"patching_rect" : [ 2060.166748, 1404.0, 252.0, 83.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 815.783325, 403.0, 408.0, 53.0 ],
+					"presentation_rect" : [ 815.783325, 403.0, 412.0, 53.0 ],
 					"style" : "",
-					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/02 Boarders Of Canada.m4a\"",
+					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/05 Closer.m4a\"",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -1056,7 +1082,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1666.0, 272.0, 520.0, 49.0 ],
 					"style" : "",
-					"text" : "7, 5, 2021, 15:17:51, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/02 Boarders Of Canada.m4a cr Weather: 9.52°c, Heavy Cloud cr"
+					"text" : "7, 5, 2021, 15:48:37, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/05 Closer.m4a cr Weather: 9.52°c, Heavy Cloud cr"
 				}
 
 			}
@@ -1095,7 +1121,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2247.699951, 794.0, 73.0, 22.0 ],
 					"style" : "",
-					"text" : "9.52"
+					"text" : "9.68"
 				}
 
 			}
@@ -1234,7 +1260,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2247.699951, 675.0, 217.0, 35.0 ],
 					"style" : "",
-					"text" : "consolidated_weather[0]::the_temp 9.52"
+					"text" : "consolidated_weather[0]::the_temp 9.68"
 				}
 
 			}
@@ -1867,7 +1893,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 658.0, 457.5, 51.501221, 23.0 ],
 					"style" : "",
-					"text" : "30",
+					"text" : "20",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -2073,7 +2099,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1441.416626, 1256.25, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "set 25"
+					"text" : "set 36"
 				}
 
 			}
@@ -2355,11 +2381,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-248",
-					"linecount" : 20,
+					"linecount" : 19,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 689.5, 1566.75, 385.0, 275.0 ],
+					"patching_rect" : [ 689.5, 1566.75, 388.0, 261.0 ],
 					"style" : "",
 					"text" : "==----- MUSIC PLAYER -----==\n- Chooses folder based on score from all relevant modules.\n- Automatically puts all files in chosen folder into a umenu.\nThe umenu gets a value that decides which file to play, this file gets chosen by the urn, which knows the number of items in umenu and clears the urn after all files have been played through. This is to ensure no repeat of a song.\n- sfplay automatically bangs a message to urn when it is done playing so that it chooses a new number to be played.\n- same bang makes the sfplay play the next file.\n- bang also makes the score evaluator check if it should play files from different folder\n\nBugs: \n- Might repeat last played song when urn is cleared.\n- If you stop sfplay with the toggle it runs through all the files in umenu (use playbar to pause)\n- Starts playing from the previous selected folder when opening patch\n- Sometimes crashes which causes the toggle bug as explained above."
 				}
@@ -2872,7 +2898,7 @@
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 252057.6, "ticks" ],
+						"originallength" : [ 290496.0, "ticks" ],
 						"originaltempo" : 120.0,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
@@ -4992,7 +5018,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1652.0, 440.0, 554.400024, 446.0 ],
+					"patching_rect" : [ 1652.0, 442.5, 554.400024, 446.0 ],
 					"proportion" : 0.39,
 					"rounded" : 0,
 					"style" : ""
@@ -5600,7 +5626,7 @@
 					"destination" : [ "obj-208", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 805.5, 1404.0, 795.0, 1404.0, 795.0, 1464.0, 1359.0, 1464.0, 1359.0, 1677.0, 2046.0, 1677.0, 2046.0, 1389.0, 2348.666748, 1389.0 ],
+					"midpoints" : [ 805.5, 1404.0, 795.0, 1404.0, 795.0, 1464.0, 1359.0, 1464.0, 1359.0, 1677.0, 2046.0, 1677.0, 2046.0, 1389.0, 2302.666748, 1389.0 ],
 					"source" : [ "obj-145", 1 ]
 				}
 
@@ -6753,16 +6779,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-346", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1400.666626, 993.0, 1518.0, 993.0, 1518.0, 951.0, 1541.666626, 951.0 ],
-					"source" : [ "obj-257", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-347", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -7103,6 +7119,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-333", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-297", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-161", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -7198,6 +7223,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 1094.5, 540.0, 1094.5, 540.0 ],
 					"source" : [ "obj-302", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-223", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-304", 0 ]
 				}
 
 			}
@@ -7473,20 +7507,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-223", 0 ],
+					"destination" : [ "obj-304", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1458.083374, 1209.0, 1400.666626, 1209.0 ],
 					"source" : [ "obj-332", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-332", 1 ],
+					"destination" : [ "obj-304", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1620.666626, 1083.0, 1699.666626, 1083.0 ],
+					"midpoints" : [ 1620.666626, 1083.0, 1535.083374, 1083.0 ],
 					"source" : [ "obj-333", 1 ]
 				}
 
@@ -7842,6 +7875,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-345", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-378", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-379", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -7855,7 +7897,7 @@
 					"destination" : [ "obj-332", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1650.833374, 1116.0, 1518.0, 1116.0, 1518.0, 1122.0, 1458.083374, 1122.0 ],
+					"midpoints" : [ 1650.833374, 1137.0, 1458.083374, 1137.0 ],
 					"source" : [ "obj-379", 0 ]
 				}
 
@@ -8749,11 +8791,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-14" : [ "toggle", "toggle", 0 ],
+			"obj-233" : [ "toggle[2]", "toggle[2]", 0 ],
 			"obj-56" : [ "gain~", "gain~", 0 ],
 			"obj-321" : [ "toggle[1]", "toggle[1]", 0 ],
-			"obj-347" : [ "number", "number", 0 ],
-			"obj-233" : [ "toggle[2]", "toggle[2]", 0 ]
+			"obj-14" : [ "toggle", "toggle", 0 ],
+			"obj-347" : [ "number", "number", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -8857,8 +8899,8 @@
 , 			{
 				"name" : "rsliderGold",
 				"default" : 				{
-					"color" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
-					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
+					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ],
+					"color" : [ 0.646639, 0.821777, 0.854593, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
