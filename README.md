@@ -75,11 +75,6 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 	- Starts playing from the previous selected folder when opening the patch (not the correct folder if the score has changed since last opening).
 	- Sometimes crashes, which causes the toggle bug to run.
 
-- Customer counter:
-	- Does not read from file when opening patch. 
-	1. To get it to work, use "umenu" labelled "^ HOURS ^" and select the same value as it is showing when loading. This should make it work, but if it doesn't:
-	2. try also pressing the "path"-message above "thispatcher", selecting a different scenario and then repeat first step.
-
 - Logging:
 	- First file after opening outputs without date (day).
 	- Deletes everything previous in the file if patcher is reopened on same day.
