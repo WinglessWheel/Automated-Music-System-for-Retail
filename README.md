@@ -1,7 +1,7 @@
-# Automated Music System for Retail (bachelors thesis)
+# Automated Music System for Retail (bachelors)
 Prototype built in MAX 7.0.0.
 
-Part of my bachelor thesis. 
+Part of my bachelors. 
 Music Technology @ NTNU, spring 2021.
 
 API: https://www.metaweather.com/api/
@@ -11,19 +11,19 @@ Implementation of API based on "Amazing Max Stuff" video on youtube (https://www
 ## Example
 In this project, we're looking at a case of a smaller store open from 09:00 to 21:00. If there are 20 or more customers in the store it is considered "busy", meaning there are a lot of customers.
 Under the condition we're calling normal for this store (less than 20 customers) we are playing slow music, increasing the time customers spend in store (dwell time) which should lead to higher gross sales. Under the condition where there are more than 20 customers at one given time we're playing music with a slightly higher tempo to try and make the customers feel like they're spending less time in line. This is perceptional and has been shown to differ from the actual time spent.
-Because of licensing, there is no music in the music folders in this example. Feel free to add whatever music you'd like to test the music. 
+Because of licensing, there is no music in the music folders in this example. Feel free to add whatever music you'd like to test the system. 
 
 ## How to use
 - Before you start: add music to the folders marked "music_low, mid, high". The system should automatically start playing music when the patcher is opened, selected automatically from a folder based on the current score. 
-- If it doesn't start playing: Check the path for the music (in music player) and also check if the score evaluator gives any usable values. Check if the trigger object in the music player is active.
+- If it doesn't start playing: Firstly try to restart the patcher a few times. There is a bug causing it to not start playback. If this doesn't help: Check the path for the music (in music player) and also check if the score evaluator gives any usable values. Check if the trigger object in the music player is active. 
 - In presentation mode the only thing you can do is turning on or off the override and adjusting the volume. The volume should be calibrated upon installation and set as default in message box in the output section. When the override is turned off the volume will automatically be set back to default value.
 - The patch reads customers through a document. This is for demonstration purposes. Please see the section on Customer Counter for more information. 
 
 ## Score evaluator
 - Checks if it is a weekday or weekend and checks if the customer number is lower or higher than the high range parameter in customer counter. 
 - Can add multiple modules to evaluate. 
-- Currently it has a range of 20, 30 and 40, where 20 chooses to slow music, 30 selects medium speed and 40 selects high tempo music. This can be used in various depending on the wanted musical output. For example, if the music is categorised by modes, it can select different modes based on the wanted variables.
-In this example it works by looking at weekday or weekend. This gives it a score of either 10 or 20. Then it checks the number of customers. If this is lower than the high range (meaning there's a lot of customers for this virtual store) it will add 10, or if it is above the high range it will give add 20. There is no way in this example that the score goes to 40 (but you can manually if you'd like to test).
+- Currently it has a range of 20, 30 and 40, where 20 chooses to slow music, 30 selects medium speed and 40 selects high tempo music. This can be used in various ways depending on the wanted musical output. For example, if the music is categorised by modes, it can select different modes based on the wanted variables.
+In this example it works by looking at weekday or weekend. This gives it a score of either 10 or 20. Then it checks the number of customers. If this is lower than the high range (meaning there's a lot of customers for this example store) it will add 10, or if it is above the high range it will give add 20. There is no way in this example that the score goes to 40 (but you can manually if you'd like to test).
 
 ## Music player
 - Chooses folder based on score from all relevant modules.
@@ -69,6 +69,11 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 - Used to display temperature and illustrations of the weather for the user in presentation mode.
 
 ## Bugs / issues
+- General:
+	- Sometimes doesn't start music automatically. Solved by reopening a few times.
+
+- Date and time:
+	- Sunday represented as "0" (zero), not as 7.
 - Music player:
 	- Might repeat last played song when urn is cleared.
 	- If you manually stop the playback with toggle it runs through all the files in "umenu". This is because of the implementation of the randomizer, which reacts when you start and stop the playback. If you need to stop the music, use the pause button on the "playbar"-object.
@@ -91,3 +96,4 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 - [ ] Auto gain: Needs to be connected with output section in a way that automatically adjusts the volume based on room ambience.
 - [ ] Customer counter: Add the possibility to have an external input.
 - [ ] Logging: Fix bugs.
+- [ ] 
