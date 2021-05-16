@@ -38,12 +38,146 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-343",
+					"linecount" : 14,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 3173.916748, 849.0, 324.0, 194.0 ],
+					"style" : "",
+					"text" : "==---- Weather report -----==\n\n- Uses an API (https://www.metaweather.com/) to collect weather data which can be logged. \n- Currently it is looking at the weather in Oslo, Norway. This can be changed in the message box starting with \"get\". \n- The information retrieved is in the form of dictionaries, and is with the Javascript interpreted in a way that is usable.\n- Module is based on a video from the channel \"Amazing Max Stuff\" on YouTube (https://www.youtube.com/watch?v=Vks-arUZbdA).\n- Used to display temperature and illustrations of the weather for the user in presentation mode.\n"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-338",
+					"linecount" : 21,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 3173.916748, 521.5, 324.0, 288.0 ],
+					"style" : "",
+					"text" : "==---- Auto gain -----==\n\n- Uses a microphone input that should be installed in a specific manner: The microphone should be highly directional and placed so that it does not capture the music itself, but the ambient noise in the store. It should also be placed in a strategic position where it will give a \"good view\" of the whole store, meaning its measurements can be used throughout the store.\n- It is then filtered with a downsampling to remove high frequencies, so that high frequency peaks are ignored. Alternatively this can be recorded in 8-bits to save processing power.\n- A-weighted scaling into an \"average\"-object. This should then be scaled so that it can adjust the music volume so that the music is hearable above the ambience, without being to up front.\n- This module would probably be better implemented in the output system after the patcher.\n- Currently disconnected to avoid issues.\n- See bugs / issues.\n"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-336",
+					"linecount" : 9,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 3166.916748, 336.0, 319.0, 127.0 ],
+					"style" : "",
+					"text" : "==-----Logging -----==\n\n- Writes date and time with the current song to a file with the current date as the filename. Uses a new line and then writes the weather. This module can be used in conjunction with the stores sales and customer counter in order to actually make statistics of how to music is affecting customers and sales.\n- See bugs / issues."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-334",
+					"linecount" : 14,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 3166.916748, 114.0, 324.0, 194.0 ],
+					"style" : "",
+					"text" : "==-----Date and timer -----==\n\nAlthough this section is the biggest in the code, it is not that complicated. Using a normal programming language this would have been solved in much fewer lines of code. The gist of it is that it uses an algorithm to find out which day of the week it is so it can be used to check wether or not it is a weekday. This is of course not necessary in all stores as the customer flow might not differ much. The algorithm uses \"codes\" depending on which year, month, century, date and leap year and then modulos with 7 (Year Code + Month Code + Century Code + Date – Leap Year)%7.\nOther than this it uses a basic \"date\"-object to get the time of the day and date."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-330",
+					"linecount" : 7,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 369.916748, 1877.75, 290.0, 100.0 ],
+					"style" : "",
+					"text" : "==----- Outputr -----==\n- Needs to be calibrated on installation. The message keeps the default value that is banged on load. \n- The DAC is on by default. \n- This section is not to be used as an active volume adjustment."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-313",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1086.083374, 1566.75, 264.0, 74.0 ],
+					"style" : "",
+					"text" : "==----- Randomizer -----==\n- Basic implementation for randomising of playback. Uses the \"urn\"-object to not repeat numbers. The number is in the range of the number of items in \"umenu\" in music player."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-312",
+					"linecount" : 21,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 369.916748, 1570.0, 290.0, 288.0 ],
+					"style" : "",
+					"text" : "==----- Score evaluator -----==\n\n- Checks if it is a weekday or weekend and checks if the customer number is lower or higher than the high range parameter in customer counter. \n- Can add multiple modules to evaluate. \n- Currently it has a range of 20, 30 and 40, where 20 chooses to slow music, 30 selects medium speed and 40 selects high tempo music. This can be used in various ways depending on the wanted musical output. For example, if the music is categorised by modes, it can select different modes based on the wanted variables.\nIn this example it works by looking at weekday or weekend. This gives it a score of either 10 or 20. Then it checks the number of customers. If this is lower than the high range (meaning there's a lot of customers for this example store) it will add 10, or if it is above the high range it will give add 20. There is no way in this example that the score goes to 40 (but you can manually if you'd like to test).\n"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.630609, 0.277737, 0.179169, 0.99 ],
+					"id" : "obj-298",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 757.333313, 71.5, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "Also remember to check out the presentation view.",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.630609, 0.277737, 0.179169, 1.0 ],
+					"id" : "obj-287",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 597.0, 71.5, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "Please see README.md before continuing.",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-245",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 851.0, 599.0, 50.0, 22.0 ],
+					"style" : "",
+					"text" : "0"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-148",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1886.0, 1286.0, 744.0, 22.0 ],
+					"patching_rect" : [ 2028.866577, 1345.5, 744.0, 22.0 ],
 					"style" : "",
 					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/customers/weekday_high_00.txt\""
 				}
@@ -571,7 +705,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1846.599976, 383.0, 137.56665, 22.0 ],
 					"style" : "",
-					"text" : "write log_7_5_2021.txt"
+					"text" : "write log_16_5_2021.txt"
 				}
 
 			}
@@ -638,17 +772,17 @@
 					"fontname" : "Helvetica",
 					"fontsize" : 15.0,
 					"id" : "obj-208",
-					"linecount" : 6,
+					"linecount" : 5,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2060.166748, 1404.0, 214.0, 98.0 ],
+					"patching_rect" : [ 2060.166748, 1404.0, 254.0, 83.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
 					"presentation_rect" : [ 815.783325, 403.0, 406.0, 68.0 ],
 					"style" : "",
-					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/10 Haydn_ Symf. Nr. 94, Fra 2. Sats.m4a\"",
+					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/12 Beethoven_ Symf. Nr. 5, Fra 1. Sats.m4a\"",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -741,7 +875,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2812.0, 545.0, 279.0, 22.0 ],
 					"style" : "",
-					"text" : "consolidated_weather[0]::weather_state_abbr hc"
+					"text" : "consolidated_weather[0]::weather_state_abbr lr"
 				}
 
 			}
@@ -1120,7 +1254,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1666.0, 272.0, 520.0, 49.0 ],
 					"style" : "",
-					"text" : "7, 5, 2021, 17:46:56, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/10 Haydn_ Symf. Nr. 94, Fra 2. Sats.m4a cr Weather: 9.68°c, Heavy Cloud cr"
+					"text" : "16, 5, 2021, 13:12:1, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/12 Beethoven_ Symf. Nr. 5, Fra 1. Sats.m4a cr Weather: 12.18°c, Light Rain cr"
 				}
 
 			}
@@ -1159,7 +1293,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2247.699951, 794.0, 73.0, 22.0 ],
 					"style" : "",
-					"text" : "9.68"
+					"text" : "12.18"
 				}
 
 			}
@@ -1188,17 +1322,16 @@
 					"fontname" : "Helvetica",
 					"fontsize" : 20.0,
 					"id" : "obj-293",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2484.699951, 794.0, 124.0, 48.0 ],
+					"patching_rect" : [ 2484.699951, 794.0, 124.0, 28.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 1047.75061, 595.75, 85.5, 48.0 ],
 					"style" : "",
-					"text" : "\"Heavy Cloud\"",
+					"text" : "\"Light Rain\"",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -1227,7 +1360,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2489.699951, 675.0, 279.0, 35.0 ],
 					"style" : "",
-					"text" : "consolidated_weather[0]::weather_state_name \"Heavy Cloud\""
+					"text" : "consolidated_weather[0]::weather_state_name \"Light Rain\""
 				}
 
 			}
@@ -1298,7 +1431,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2247.699951, 675.0, 217.0, 35.0 ],
 					"style" : "",
-					"text" : "consolidated_weather[0]::the_temp 9.68"
+					"text" : "consolidated_weather[0]::the_temp 12.18"
 				}
 
 			}
@@ -1492,7 +1625,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.994043, 0.712337, 0.288566, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-7",
@@ -1538,7 +1671,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.994043, 0.712337, 0.288566, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-256",
@@ -1884,8 +2017,8 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.901961, 0.8, 0.392157, 1.0 ],
-					"checkedcolor" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+					"bgcolor" : [ 0.665086, 0.106606, 0.136815, 1.0 ],
+					"checkedcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"id" : "obj-14",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1906,7 +2039,7 @@
 					}
 ,
 					"style" : "",
-					"uncheckedcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"uncheckedcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"varname" : "toggle"
 				}
 
@@ -2124,7 +2257,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1441.416626, 1256.25, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "set 27"
+					"text" : "set 18"
 				}
 
 			}
@@ -2406,13 +2539,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-248",
-					"linecount" : 19,
+					"linecount" : 11,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 689.5, 1566.75, 388.0, 261.0 ],
+					"patching_rect" : [ 689.5, 1566.75, 388.0, 154.0 ],
 					"style" : "",
-					"text" : "==----- MUSIC PLAYER -----==\n- Chooses folder based on score from all relevant modules.\n- Automatically puts all files in chosen folder into a umenu.\nThe umenu gets a value that decides which file to play, this file gets chosen by the urn, which knows the number of items in umenu and clears the urn after all files have been played through. This is to ensure no repeat of a song.\n- sfplay automatically bangs a message to urn when it is done playing so that it chooses a new number to be played.\n- same bang makes the sfplay play the next file.\n- bang also makes the score evaluator check if it should play files from different folder\n\nBugs: \n- Might repeat last played song when urn is cleared.\n- If you stop sfplay with the toggle it runs through all the files in umenu (use playbar to pause)\n- Starts playing from the previous selected folder when opening patch\n- Sometimes crashes which causes the toggle bug as explained above."
+					"text" : "==----- Music player -----==\n- Chooses folder based on score from all relevant modules.\n- Automatically puts all files in chosen folder into a \"umenu\"-object. The \"umenu\"-object gets a value that decides which file to play, this file gets chosen by the urn in the randomizer, which knows the number of items in \"umenu\" and clears the urn after all files have been played through. This is to ensure no repeat of a song.\n- \"sfplay~\" automatically bangs a message to urn when it is done playing. It then chooses a new number to be played. This bang makes  \"sfplay~\" play the next file. Lastly this bang also makes the score evaluator check if it should play files from different folder."
 				}
 
 			}
@@ -2894,7 +3027,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 586.0, 346.5, 69.0, 22.0 ],
 					"style" : "",
-					"text" : "delay 2100"
+					"text" : "delay 2400"
 				}
 
 			}
@@ -2936,7 +3069,7 @@
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 181235.2, "ticks" ],
+						"originallength" : [ 95411.2, "ticks" ],
 						"originaltempo" : 120.0,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
@@ -4197,13 +4330,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-80",
-					"linecount" : 7,
+					"linecount" : 9,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 124.0, 1566.75, 214.0, 100.0 ],
+					"patching_rect" : [ 124.0, 1566.75, 217.0, 127.0 ],
 					"style" : "",
-					"text" : "==---- Override ----==\nGets the current fader value from Pre DAC fader and stores in a message.\nThe message only outputs once when override gate is closed, making the Pre DAC fader the previous value it had before override."
+					"text" : "==---- Override ----==\n- Turns on or off the in-store override. The previous value of the output section gets stored. When the override is turned off the previous value will be selected for the output. This can be used in situations where the staff of a store needs to change the volume manually."
 				}
 
 			}
@@ -4910,7 +5043,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.972014, 0.702418, 0.277648, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-70",
@@ -4961,7 +5094,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.981371, 0.753425, 0.339239, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-385",
@@ -4979,7 +5112,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.972014, 0.702418, 0.277648, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-255",
@@ -4997,7 +5130,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.981371, 0.753425, 0.339239, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-365",
@@ -5015,7 +5148,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.981371, 0.753425, 0.339239, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-160",
@@ -5048,7 +5181,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.972014, 0.702418, 0.277648, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-358",
@@ -5179,7 +5312,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.972014, 0.702418, 0.277648, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-244",
@@ -5197,7 +5330,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.972014, 0.702418, 0.277648, 1.0 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-77",
@@ -5664,7 +5797,7 @@
 					"destination" : [ "obj-208", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 805.5, 1404.0, 795.0, 1404.0, 795.0, 1464.0, 1359.0, 1464.0, 1359.0, 1677.0, 2046.0, 1677.0, 2046.0, 1389.0, 2264.666748, 1389.0 ],
+					"midpoints" : [ 805.5, 1404.0, 795.0, 1404.0, 795.0, 1464.0, 1359.0, 1464.0, 1359.0, 1677.0, 2046.0, 1677.0, 2046.0, 1389.0, 2304.666748, 1389.0 ],
 					"source" : [ "obj-145", 1 ]
 				}
 
@@ -6679,7 +6812,7 @@
 					"destination" : [ "obj-44", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 145.5, 834.0, 625.0, 834.0, 625.0, 501.0, 819.0, 501.0 ],
+					"midpoints" : [ 145.5, 834.0, 625.0, 834.0, 625.0, 502.0, 819.0, 502.0 ],
 					"source" : [ "obj-246", 0 ]
 				}
 
@@ -7067,7 +7200,7 @@
 					"destination" : [ "obj-44", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 782.833313, 642.0, 760.0, 642.0, 760.0, 501.0, 856.5, 501.0 ],
+					"midpoints" : [ 782.833313, 642.0, 760.0, 642.0, 760.0, 496.0, 856.5, 496.0 ],
 					"source" : [ "obj-284", 0 ]
 				}
 
@@ -7334,7 +7467,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 186.5, 261.0, 142.5, 261.0 ],
+					"midpoints" : [ 186.5, 264.0, 142.5, 264.0 ],
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -7424,7 +7557,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 230.5, 261.0, 142.5, 261.0 ],
+					"midpoints" : [ 230.5, 271.0, 142.5, 271.0 ],
 					"source" : [ "obj-32", 0 ]
 				}
 
@@ -7830,6 +7963,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-245", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-369", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-371", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -8069,7 +8211,7 @@
 					"destination" : [ "obj-44", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 197.5, 369.0, 220.0, 369.0, 220.0, 423.0, 754.0, 423.0, 754.0, 501.0, 894.0, 501.0 ],
+					"midpoints" : [ 197.5, 369.0, 220.0, 369.0, 220.0, 423.0, 754.0, 423.0, 754.0, 494.0, 894.0, 494.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -8848,8 +8990,8 @@
 			"obj-14" : [ "toggle", "toggle", 0 ],
 			"obj-347" : [ "number", "number", 0 ],
 			"obj-321" : [ "toggle[1]", "toggle[1]", 0 ],
-			"obj-56" : [ "gain~", "gain~", 0 ],
-			"obj-278" : [ "toggle[3]", "toggle[3]", 0 ]
+			"obj-278" : [ "toggle[3]", "toggle[3]", 0 ],
+			"obj-56" : [ "gain~", "gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
