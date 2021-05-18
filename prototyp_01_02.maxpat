@@ -70,7 +70,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1391.166626, 1327.900024, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "6"
+					"text" : "23"
 				}
 
 			}
@@ -438,7 +438,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 919.499939, 1135.900024, 137.0, 89.0 ],
 					"style" : "",
-					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow\""
+					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med\""
 				}
 
 			}
@@ -647,9 +647,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1779.0, 244.187744, 56.0, 22.0 ],
+					"patching_rect" : [ 1779.0, 244.187744, 69.0, 22.0 ],
 					"style" : "",
-					"text" : "delay 50"
+					"text" : "delay 1000"
 				}
 
 			}
@@ -855,7 +855,7 @@
 					"presentation_linecount" : 4,
 					"presentation_rect" : [ 815.783325, 403.0, 406.0, 68.0 ],
 					"style" : "",
-					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/05 Morley_ Now Is The Month Of Maying.m4a\"",
+					"text" : "\"SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/06 Poor Tom.m4a\"",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -1273,21 +1273,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1666.0, 239.0, 24.0, 24.0 ],
+					"patching_rect" : [ 1661.733887, 191.0, 24.0, 24.0 ],
 					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-393",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1661.733887, 202.0, 63.0, 22.0 ],
-					"style" : "",
-					"text" : "delay 100"
 				}
 
 			}
@@ -1300,7 +1287,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 1661.733887, 161.0, 69.0, 22.0 ],
 					"style" : "",
-					"text" : "delay 2000"
+					"text" : "delay 2100"
 				}
 
 			}
@@ -1327,7 +1314,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1666.0, 272.0, 520.0, 49.0 ],
 					"style" : "",
-					"text" : "18, 5, 2021, 17:45:3, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/05 Morley_ Now Is The Month Of Maying.m4a cr Weather: 13.20°c, Light Rain cr"
+					"text" : "18, 5, 2021, 18:8:56, SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/06 Poor Tom.m4a cr Weather: 13.20°c, Light Rain cr"
 				}
 
 			}
@@ -2124,7 +2111,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 658.0, 457.5, 51.501221, 23.0 ],
 					"style" : "",
-					"text" : "20",
+					"text" : "30",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -2317,7 +2304,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1494.083374, 1262.900024, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "set 6"
+					"text" : "set 23"
 				}
 
 			}
@@ -3015,14 +3002,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-145",
-					"items" : [ "04 Palestrina_ Kyrie Eleison Fra Missa Brevis.m4a", ",", "02 Magnushymnen.m4a", ",", "06 Dans For Lutt.m4a", ",", "05 Morley_ Now Is The Month Of Maying.m4a", ",", "03 Larotta, Dans.m4a", ",", "07 Bach_ Badinerie, Suite Nr. 2 H-Moll.m4a", ",", "01 Gregoriansk Sang_ Kyrie Eleison.m4a", ",", "09 Händel_ For Unto Us.. Fra Messias.m4a", ",", "08 Vivaldi_ Våren, 1. Sats Fra Årstidene.m4a" ],
+					"items" : [ "04 Song Of Gold.m4a", ",", "07 Magnetic City.m4a", ",", "05 Closer.m4a", ",", "01 Me! Come! My Dazzled Face.m4a", ",", "03 Home In My Heart.m4a", ",", "02 Boarders Of Canada.m4a", ",", "09 Guardian And Tramp.m4a", ",", "06 Poor Tom.m4a", ",", "08 I Believe.m4a" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 714.5, 1379.0, 182.0, 22.0 ],
-					"prefix" : "SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_slow/",
+					"prefix" : "SSD:/Users/torjemarkussen/Documents/NTNU/MUSTEK/6. semester/Bacheloroppgave/Programmering/music_med/",
 					"style" : ""
 				}
 
@@ -3116,7 +3103,7 @@
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 124236.8, "ticks" ],
+						"originallength" : [ 184230.4, "ticks" ],
 						"originaltempo" : 120.0,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
@@ -5595,7 +5582,7 @@
 					"destination" : [ "obj-317", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1588.666626, 309.0, 1651.0, 309.0, 1651.0, 234.0, 1741.0, 234.0, 1741.0, 156.0, 1765.5, 156.0 ],
+					"midpoints" : [ 1588.666626, 306.0, 1653.0, 306.0, 1653.0, 225.0, 1743.0, 225.0, 1743.0, 156.0, 1765.5, 156.0 ],
 					"source" : [ "obj-117", 0 ]
 				}
 
@@ -5605,7 +5592,7 @@
 					"destination" : [ "obj-79", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1588.666626, 320.333333, 1738.5, 320.333333 ],
+					"midpoints" : [ 1588.666626, 325.333333, 1738.5, 325.333333 ],
 					"source" : [ "obj-117", 0 ]
 				}
 
@@ -5712,7 +5699,7 @@
 					"destination" : [ "obj-79", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1724.5, 267.0, 1663.0, 267.0, 1663.0, 324.0, 1735.0, 324.0, 1735.0, 330.0, 1738.5, 330.0 ],
+					"midpoints" : [ 1724.5, 246.0, 1663.0, 246.0, 1663.0, 324.0, 1735.0, 324.0, 1735.0, 330.0, 1738.5, 330.0 ],
 					"source" : [ "obj-134", 0 ]
 				}
 
@@ -8236,21 +8223,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-393", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1671.233887, 186.0, 1671.233887, 186.0 ],
-					"source" : [ "obj-392", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-395", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1671.233887, 231.0, 1675.5, 231.0 ],
-					"source" : [ "obj-393", 0 ]
+					"source" : [ "obj-392", 0 ]
 				}
 
 			}
@@ -8268,7 +8244,7 @@
 					"destination" : [ "obj-317", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1675.5, 264.0, 1702.0, 264.0, 1702.0, 231.0, 1741.0, 231.0, 1741.0, 156.0, 1765.5, 156.0 ],
+					"midpoints" : [ 1671.233887, 264.0, 1701.0, 264.0, 1701.0, 231.0, 1741.0, 231.0, 1741.0, 156.0, 1765.5, 156.0 ],
 					"source" : [ "obj-395", 0 ]
 				}
 
@@ -8278,7 +8254,7 @@
 					"destination" : [ "obj-329", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1675.5, 264.0, 1675.5, 264.0 ],
+					"midpoints" : [ 1671.233887, 264.0, 1675.5, 264.0 ],
 					"source" : [ "obj-395", 0 ]
 				}
 
@@ -9124,11 +9100,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-233" : [ "toggle[2]", "toggle[2]", 0 ],
-			"obj-321" : [ "toggle[1]", "toggle[1]", 0 ],
-			"obj-278" : [ "toggle[3]", "toggle[3]", 0 ],
 			"obj-14" : [ "toggle", "toggle", 0 ],
 			"obj-347" : [ "number", "number", 0 ],
+			"obj-321" : [ "toggle[1]", "toggle[1]", 0 ],
+			"obj-278" : [ "toggle[3]", "toggle[3]", 0 ],
+			"obj-233" : [ "toggle[2]", "toggle[2]", 0 ],
 			"obj-56" : [ "gain~", "gain~", 0 ]
 		}
 ,
@@ -9233,8 +9209,8 @@
 , 			{
 				"name" : "rsliderGold",
 				"default" : 				{
-					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ],
-					"color" : [ 0.646639, 0.821777, 0.854593, 1.0 ]
+					"color" : [ 0.646639, 0.821777, 0.854593, 1.0 ],
+					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
