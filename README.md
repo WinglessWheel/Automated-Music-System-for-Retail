@@ -9,17 +9,17 @@ API: https://www.metaweather.com/api/
 Implementation of API based on "Amazing Max Stuff" video on youtube (https://www.youtube.com/watch?v=Vks-arUZbdA)
 
 ## Example
-In this project, we're looking at a case of a smaller store open from 09:00 to 21:00. If there are 20 or more customers in the store it is considered "busy", meaning there are a lot of customers.
-Under the condition we're calling normal for this store (less than 20 customers) we are playing slow music, increasing the time customers spend in store (dwell time) which should lead to higher gross sales. Under the condition where there are more than 20 customers at one given time we're playing music with a slightly higher tempo to try and make the customers feel like they're spending less time in line. This is perceptional and has been shown to differ from the actual time spent.
+In this project we're looking at a case of a smaller store open from 09:00 to 21:00. If there are 20 or more customers in the store it is considered "busy", meaning there are a lot of customers.
+Under the condition we're calling normal for this store (less than 20 customers) we are playing slow music, increasing the time customers spend in store (dwell time) which should lead to higher gross sales. Under the condition where there are more than 20 customers at one given time we're playing music with a slightly higher tempo to try and make the customers feel like they're spending less time waiting in line. This should affect customers perception of spent time and has been shown to differ from the actual time spent, meaning they feel like they have waited shorter.
 Because of licensing, there is no music in the music folders in this example. Feel free to add whatever music you'd like to test the system. 
 
 ## How to use
 ###### Before you start:
 -  Add music to the folders marked "music_low, mid, high". The system should automatically start playing music when the patcher is opened, selected automatically based on the current score. 
-- There must be multiple files in the folders.
-- The project must be saved locally in a folder before and after opening to ensure that the filepath is correct. Otherwise it will see the previous filepath, which is whoever saved it last.
+- There should be multiple files in the folders (>8).
+- The project must be saved locally in a folder before and after opening to ensure that the filepath is correct. Otherwise it will look at the previous filepath, which is whoever saved the project last.
 ###### If it doesn't start playing: 
-- Firstly try to restart the patcher a few times. There is a bug causing it to not start playback. 
+- Firstly try to restart the patcher a few times. There is a bug that sometimes causes it to not start playback. 
 If this doesn't help: Check the path for the music (in music player) and also check if the score evaluator gives any usable values. Check if the trigger object in the music player is active. 
 - In presentation mode the only thing you can do is turning on or off the override and adjusting the volume. The volume should be calibrated upon installation and set as default in message box in the output section. When the override is turned off the volume will automatically be set back to default value.
 - The patch reads customers through a document. This is for demonstration purposes. Please see the section on Customer Counter for more information. 
@@ -82,14 +82,16 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 
 - Date and time:
 	- Sunday represented as "0" (zero), not as 7.
+
 - Music player:
+	- Might not play more than one song if you force start it to play.
 	- Might repeat last played song when urn is cleared.
 	- If you manually stop the playback with toggle it runs through all the files in "umenu". This is because of the implementation of the randomizer, which reacts when you start and stop the playback. If you need to stop the music, use the pause button on the "playbar"-object.
 	- Starts playing from the previous selected folder when opening the patch (not the correct folder if the score has changed since last opening).
 	- Sometimes crashes, which causes the toggle bug to run.
 
 - Logging:
-	- First file after opening outputs without date (day).
+	- First file after opening patch outputs without date (day).
 	- Deletes everything previous in the file if patcher is reopened on same day.
 
 - Auto gain:
@@ -100,7 +102,7 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 - Weather report:
 	- Unable to access image files if not present in the project root.
 
-- GUI:
+- GUI/Presentation mode:
 	- Changes font if Helvetica isn't on your computer (makes it look kinda off).
 
 ###### TO-DO
