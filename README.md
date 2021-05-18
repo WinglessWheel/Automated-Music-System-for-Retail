@@ -91,7 +91,6 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 	- Sometimes crashes, which causes the toggle bug to run.
 
 - Logging:
-	- First file after opening patch outputs without date (day).
 	- Deletes everything previous in the file if patcher is reopened on same day.
 
 - Auto gain:
