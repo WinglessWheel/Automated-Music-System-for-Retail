@@ -19,7 +19,8 @@ Because of licensing, there is no music in the music folders in this example. Fe
 - There should be multiple files in the folders (>8).
 - The project must be saved locally in a folder before and after opening to ensure that the filepath is correct. Otherwise it will look at the previous filepath, which is whoever saved the project last.
 ###### If it doesn't start playing: 
-- Firstly try to restart the patcher a few times. There is a bug that sometimes causes it to not start playback. 
+- Firstly try to restart the patcher a few times. There is a bug that sometimes causes it to not start playback.
+- Alternatively you can press the "On/Off"-symbol in the lower right corner of the patch. This is because sometimes the DAC doesn't actually turn on. When you do this, it might just play one song and then stop playing. To get it to work again, press the message box labeled "path" correlated to the folder the patch is supposed to play from. This usually makes it work again.
 If this doesn't help: Check the path for the music (in music player) and also check if the score evaluator gives any usable values. Check if the trigger object in the music player is active. 
 - In presentation mode the only thing you can do is turning on or off the override and adjusting the volume. The volume should be calibrated upon installation and set as default in message box in the output section. When the override is turned off the volume will automatically be set back to default value.
 - The patch reads customers through a document. This is for demonstration purposes. Please see the section on Customer Counter for more information. 
@@ -79,6 +80,7 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 ## Bugs / issues
 - General:
 	- Sometimes doesn't start music automatically. Solved by reopening a few times.
+		- This might be because the DAC doesn't always turn on when opening patch. Tried to solve this with delayed bang when opening patch.
 
 - Date and time:
 	- Sunday represented as "0" (zero), not as 7.
