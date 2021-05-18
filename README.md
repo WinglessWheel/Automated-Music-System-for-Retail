@@ -14,10 +14,18 @@ Under the condition we're calling normal for this store (less than 20 customers)
 Because of licensing, there is no music in the music folders in this example. Feel free to add whatever music you'd like to test the system. 
 
 ## How to use
-- Before you start: add music to the folders marked "music_low, mid, high". The system should automatically start playing music when the patcher is opened, selected automatically from a folder based on the current score. 
-- If it doesn't start playing: Firstly try to restart the patcher a few times. There is a bug causing it to not start playback. If this doesn't help: Check the path for the music (in music player) and also check if the score evaluator gives any usable values. Check if the trigger object in the music player is active. 
+###### Before you start:
+-  Add music to the folders marked "music_low, mid, high". The system should automatically start playing music when the patcher is opened, selected automatically based on the current score. 
+- There must be multiple files in the folders.
+- The project must be saved locally in a folder before and after opening to ensure that the filepath is correct. Otherwise it will see the previous filepath, which is whoever saved it last.
+###### If it doesn't start playing: 
+- Firstly try to restart the patcher a few times. There is a bug causing it to not start playback. 
+If this doesn't help: Check the path for the music (in music player) and also check if the score evaluator gives any usable values. Check if the trigger object in the music player is active. 
 - In presentation mode the only thing you can do is turning on or off the override and adjusting the volume. The volume should be calibrated upon installation and set as default in message box in the output section. When the override is turned off the volume will automatically be set back to default value.
 - The patch reads customers through a document. This is for demonstration purposes. Please see the section on Customer Counter for more information. 
+
+###### If all else fails:
+torjemarkussen@gmail.com
 
 ## Score evaluator
 - Checks if it is a weekday or weekend and checks if the customer number is lower or higher than the high range parameter in customer counter. 
@@ -91,6 +99,9 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 
 - Weather report:
 	- Unable to access image files if not present in the project root.
+
+- GUI:
+	- Changes font if Helvetica isn't on your computer (makes it look kinda off).
 
 ###### TO-DO
 - [ ] Auto gain: Needs to be connected with output section in a way that automatically adjusts the volume based on room ambience.
