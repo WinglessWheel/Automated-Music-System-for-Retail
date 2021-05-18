@@ -110,4 +110,4 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 - [ ] Auto gain: Needs to be connected with output section in a way that automatically adjusts the volume based on room ambience.
 - [ ] Customer counter: Add the possibility to have an external input.
 - [ ] Logging: Fix bugs.
-- [ ] Try and figure out why playback doesn't always start when opening patcher.
+- [x] Try and figure out why playback doesn't always start when opening patcher.
