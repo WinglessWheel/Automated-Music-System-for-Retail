@@ -1,12 +1,18 @@
-# Automated Music System for Retail (bachelors thesis)
-Prototype built in MAX 7.0.0.
+# Automated Music System for Retail (bachelors assignment)
 
-Part of my bachelor thesis. 
+=================================================
+
+This project is one part of my bachelors assignment.
+Copyright (c) 2021 - Torje Markussen
+
 Music Technology @ NTNU, spring 2021.
+Prototype built in MAX 7.0.0.
 
 API: https://www.metaweather.com/api/
 
 Implementation of API based on "Amazing Max Stuff" video on youtube (https://www.youtube.com/watch?v=Vks-arUZbdA)
+
+=================================================
 
 ## Example
 In this project, we're looking at a case of a smaller store open from 09:00 to 21:00. If there are 20 or more customers in the store it is considered "busy", meaning there are a lot of customers.
@@ -74,6 +80,7 @@ Other than this it uses a basic "date"-object to get the time of the day and dat
 	- If you manually stop the playback with toggle it runs through all the files in "umenu". This is because of the implementation of the randomizer, which reacts when you start and stop the playback. If you need to stop the music, use the pause button on the "playbar"-object.
 	- Starts playing from the previous selected folder when opening the patch (not the correct folder if the score has changed since last opening).
 	- Sometimes crashes, which causes the toggle bug to run.
+	- Stops playing after iterating once over all files in current folder.
 
 - Logging:
 	- First file after opening outputs without date (day).
