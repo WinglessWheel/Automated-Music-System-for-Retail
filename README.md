@@ -1,4 +1,4 @@
-# Automated Music System for Retail (bachelors assignment)
+# Automated Music System for Retail
 
 =================================================
 
@@ -10,7 +10,8 @@ Prototype built in MAX 7.0.0.
 
 API: https://www.metaweather.com/api/
 
-Implementation of API based on "Amazing Max Stuff" video on youtube (https://www.youtube.com/watch?v=Vks-arUZbdA)
+Implementation of API based on "Amazing Max Stuff": 
+https://www.youtube.com/watch?v=Vks-arUZbdA
 
 =================================================
 
